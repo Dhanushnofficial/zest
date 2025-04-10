@@ -1,0 +1,68 @@
+
+.about {
+    text-align: center;
+    padding: 80px 20px;
+    /* background: linear-gradient(to right, var(--secondary),  var(--primary)); */
+    color: #fff;
+    margin: 0 150px;
+    border-radius: 8px 8px 8px 256px;
+    background-image: url("../../assets/tech.jpg");
+  }
+  
+  .about-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .about-title span {
+    background: linear-gradient(to right, var(--text-light), var(--text-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+  
+  .about-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .feature {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background: #2e2828;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+  }
+  
+  .feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  

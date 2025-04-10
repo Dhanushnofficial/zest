@@ -1,0 +1,94 @@
+/* Team.css */
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 35px 0px;
+  }
+  
+  .team-card {
+    position: relative;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-left: -20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 16%;
+    cursor: pointer;
+    overflow: hidden;/* Ensure details don't spill out */
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darker shadow for a pop-up effect */
+  }
+  
+  /* Team details slide in */
+  .team-card .team-details {
+    position: absolute;
+    top: 0;
+    left: -330px; /* Hide details off-screen to the left initially */
+    width: 240px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: left 0.5s ease; /* Slide effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* On hover, slide details in */
+  .team-card:hover .team-details {
+    left: 0;
+  }
+  
+  .team-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-position: center;
+    margin-bottom: 1rem;
+    object-fit: cover; /* Ensure image maintains aspect ratio */
+  }
+  
+  .team-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  .team-position {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #1e90ff;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #ff6347; /* Hover effect for link */
+  }
+  
+  .team-details h4, .team-details p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 0.5rem;
+    width: auto;
+  }
+  
+  .team-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
