@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./style/Home.css";
-import Banner_img from "../assets/banner.jpg";
+import { motion } from "framer-motion";
+import Banner_img from "../assets/White Gray Monochrome Business Company Blog Banner.png";
 import Expertise from "../components/Expertise/Expertise";
 import WhyUs from "../components/WhyUs/WhyUs";
-import group from "../assets/Group 324.png"
-import vector from "../assets/Vector.png"
-import vector_1 from "../assets/Vector_1.png"
-
+import group from "../assets/Group 324.png";
+import vector from "../assets/Vector.png";
+import vector_1 from "../assets/Vector_1.png";
 
 const textArray = [
   "Web Development",
@@ -48,93 +48,152 @@ const HomeBanner = () => {
 
   return (
     <>
-    <div className=" container home_banner fade-in">
-      <div className="banner_header slide-left">
-        <h1>Transform Your Ideas into Reality with Zest Pack Technology!</h1>
+      {/* Banner Section */}
+      <motion.div
+        className="container home_banner"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="banner_header"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <h1>Transform Your Ideas into Reality with Zest Pack Technology!</h1>
+          <p className="typing_text">
+            🚀 We offer <span>{displayedText}</span>
+          </p>
+          <h2>
+            ✅ Hands-on Projects | ✅ Expert Mentorship | ✅ Career Growth
+          </h2>
+          <h2>
+            At Zest Pack Technology, we create stunning, high-performance websites & apps that drive success. From startups to enterprises, our cutting-edge designs and seamless functionality help your business stand out.
+          </h2>
 
-        <p className="typing_text">
-          🚀 We offer <span>{displayedText}</span>
-        </p>
-        <h2>
-          ✅ Hands-on Projects | ✅ Expert Mentorship | ✅ Career Growth
-        </h2>
+          <motion.div
+            className="banner_card"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <p>Let’s bring your vision to life! 💡✨</p>
+            <button className="btn hover-effect">Contact Us</button>
+          </motion.div>
+        </motion.div>
 
-        <h2>
-          At Zest Pack Technology, we create stunning, high-performance websites
-          & apps that drive success. From startups to enterprises, our
-          cutting-edge designs and seamless functionality help your business
-          stand out.
-        </h2>
-        <div className="banner_card slide-up">
-          <p>Let’s bring your vision to life! 💡✨</p>
-          <button className="btn hover-effect">Contact Us</button>
-        </div>
-      </div>
-      <div>
-        <img src={Banner_img} alt="banner" className="banner_image fade-in" />
-      </div>
-    </div>
-    <div className="count">
-        <div>
-          <h4 className="count_h1">2+</h4>
-          <p className="count_p"> years of <br></br><span>experience</span></p>
-        </div>
-        <hr className="count_hr"></hr>
-        <div>
-          <h4 className="count_h1">5+</h4>
-          <p className="count_p">complete  <br></br><span>projects</span></p>
-        </div>
-        <hr className="count_hr"></hr>
-        <div>
-          <h4 className="count_h1">3+</h4>
-          <p className="count_p">Happy   <br></br><span>customer</span></p>
-        </div>
-    </div>
-    <div style={{ position: "relative" }}>
-      <div className="group">
-        <img src={group} alt="image is not found" />
-        <div className="group_card">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          <img src={Banner_img} alt="banner" className="banner_image" />
+        </motion.div>
+      </motion.div>
+
+      {/* Count Section */}
+      <motion.div
+        className="count"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        {[
+          { number: "2+", label: "years of", span: "experience" },
+          { number: "5+", label: "complete", span: "projects" },
+          { number: "3+", label: "Happy", span: "customer" },
+        ].map((item, index) => (
+          <React.Fragment key={index}>
+            <div>
+              <h4 className="count_h1">{item.number}</h4>
+              <p className="count_p">
+                {item.label} <br />
+                <span>{item.span}</span>
+              </p>
+            </div>
+            {index !== 2 && <hr className="count_hr" />}
+          </React.Fragment>
+        ))}
+      </motion.div>
+
+      {/* Group Section */}
+      <motion.div
+        style={{ position: "relative" }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly', marginTop:'50px'}}>
+        <motion.img
+          src={group}
+          alt="image is not found"
+          className="group"
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          
+        />
+
+        <motion.div
+          className="group_card"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           <h4 className="group_h4">Our Professional Background</h4>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,</p>
-          <div className="group_card_1">
-            <div className="group_card_2">01</div>
-            <div>
-              <h5 className="group_card_h5">Data Analysis</h5>
-              <p className="group_card_p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+          {[
+            { step: "01", title: "Web Development", des:"Building and maintaining websites for functionality, design, and performance." },
+            { step: "02", title: "Mobile App Development", des:"Creating software applications specifically for smartphones and tablets." },
+            { step: "03", title: "Graphic Design and Video Editing ", des:"Creating stunning visuals and dynamic videos for impactful storytelling."},
+            { step: "04", title: "Data Analysis", des:"Extracting insights from raw data to support decision-making."},
+          ].map((item, index) => (
+            <div className="group_card_1" key={index}>
+              <div className={`group_card_${index + 2}`}>{item.step}</div>
+              <div>
+                <h5 className="group_card_h5">{item.title}</h5>
+                <p className="group_card_p">{item.des}</p>
+              </div>
             </div>
-          </div>
-          <div className="group_card_1">
-            <div className="group_card_3">02</div>
-            <div>
-              <h5 className="group_card_h5">Mobile App Development</h5>
-              <p className="group_card_p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
-          <div className="group_card_1">
-            <div className="group_card_4">03</div>
-            <div>
-              <h5 className="group_card_h5">Process Engineering</h5>
-              <p className="group_card_p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
-          <div className="group_card_1">
-            <div className="group_card_5">04</div>
-            <div>
-              <h5 className="group_card_h5">Web Development</h5>
-              <p className="group_card_p">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </div>
-          </div>
+          ))}
+        </motion.div>
+
         </div>
-      </div>
-      <img src={vector} alt="Image is not found" style={{ position: 'absolute', bottom:'-35px', right:'0px', opacity:'0.2'}} />
-      <img src={vector_1} alt="Image is not found" style={{ position: 'absolute', top:'5px', left:'0px', opacity:'0.2'}} />
-    </div>
-    
-      <div>
-        <WhyUs />
-        <Expertise />
-     
-     </div>
+        
+        <motion.img
+          src={vector}
+          alt="Vector"
+          style={{ position: 'absolute', bottom: '-35px', right: '0px', opacity: '0.2' }}
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 0.2 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        />
+
+        <motion.img
+          src={vector_1}
+          alt="Vector 1"
+          style={{ position: 'absolute', top: '5px', left: '0px', opacity: '0.2' }}
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 0.2 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        />
+      </motion.div>
+
+      {/* Why Us & Expertise */}
+      <WhyUs />
+      <Expertise />
     </>
   );
 };

@@ -1,26 +1,65 @@
 .services {
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(to right, var(--secondary), var(--primary));
+  
+  /* background-color: var(--primary); */
   color: white;
 }
 .services_bg{
-  background-image: url("../../assets//Untitleddesign.png");
+  /* background-image: url("../../assets//Untitleddesign.png");
   padding: 40px;
   height: 150px;
   width: auto;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  display: flex;
+  justify-content: space-between;
+  
+  margin-bottom: 40px;
+  margin: 30px 50px;
+}
+.services_bg img{
+  height: 80vh;
+  width: auto;
+  display: block;
+}
+.service_banner{
+ margin-top: 10%;
+}
+.service_banner h1{
+  font-size: 45px;
+}
+.service_banner p{
+  margin-top: 12px;
+  font-size: 18px;
+  margin-right: 20px;
+  line-height: 1.5;
+}
+.service_banner button{
+  background-color: var(--text-dark);
+  padding: 14px 20px;
+  margin: 30px 0px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: #E2E2B6 0px 5px 15px;
+  cursor: pointer;
 }
 
 /* Section Titles */
+.services_cards{
+  background: linear-gradient(to right, var(--secondary), var(--primary));
+  margin: 50px;
+  padding-bottom: 20px;
+}
 .section-title {
   font-size: 3.6rem;
   font-weight: bold;
   margin-bottom: 30px;
   text-transform: uppercase;
-  align-items: center;
-  padding-top: 50px;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 /* Services Grid */
@@ -29,7 +68,7 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   max-width: 1100px;
-  margin: auto;
+  margin: 30px 50px;
 }
 
 .service-card {
@@ -54,7 +93,7 @@
 /* Why Choose Us */
 .why-choose {
   text-align: center;
-  padding: 50px 20px;
+  padding: 50px 20px 0px 20px;
   background: var(--primary);
 }
 
@@ -72,10 +111,14 @@
   font-size: 1.2rem;
 }
 
+.skills_img{
+  margin-top: 20px;
+}
+
 /* Testimonials */
 .testimonials {
   background: var(--primary);
-  padding: 60px 20px;
+  padding: 0px 40px 40px 40px ;
   text-align: center;
 }
 
@@ -113,13 +156,6 @@
   color: var(--primary);
 }
 
-
-
-@media (max-width: 768px){
-  .section-title{
-    font-size: 2.6rem;
-  }
-}
 @media (max-width: 768px){
   .choose-grid{
     flex-direction: column;
@@ -130,4 +166,25 @@
   .testimonial-grid{
     flex-direction: column;
   }
+  .skills_img{
+    width: 700px;
+    height: auto;
+    margin-left: -150px;
+  }
+  .section-title{
+    font-size: 2.6rem;
+  }
 }
+
+@media (max-width: 430px){
+  .services_bg{
+    flex-wrap: wrap;
+  }
+  .services_bg img{
+    display: none;
+  }
+  .services_cards{
+    margin: 0px;
+  }
+}
+

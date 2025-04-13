@@ -25,9 +25,10 @@ const WhyUs = () => {
 
   return (
     <div className={`container ${isVisible ? "fade-in" : ""}`}>
-      <h4 className="why_h1">WHY US</h4>
-      <hr className="why_hr" />
       <div className="why">
+        <div>
+        <h4 className="why_h1">WHY US</h4>
+        <hr className="why_hr" />
         <div className={`why_card slide-left ${isVisible ? "active" : ""}`}>
           <h2 className="why_card_h2">Our Commitment to Excellence</h2>
           <p className="why_card_p">
@@ -59,6 +60,7 @@ const WhyUs = () => {
             network solutions, we're here to walk you through each step with
             professional accuracy.
           </p>
+          </div>
         </div>
         <div className="why_img">
           <img src={hand} alt="Image not Found" className="why_img_1 fade-in-img" />

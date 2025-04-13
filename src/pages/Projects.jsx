@@ -1,5 +1,7 @@
 import React from 'react';
 import './style/Projects.css'
+import banner from '../assets/image.png'
+
 const Projects = () =>{
     return (
         <>
@@ -11,7 +13,7 @@ const Projects = () =>{
                     <h1>FUTURE - DRIVEN SOFTWARE DEVELOPMENT </h1>
                 </div>
                 <div>
-                    <img src="" alt="image is not found" />
+                    <img src={banner} alt="image is not found" />
                 </div>
             </div>
         </div>

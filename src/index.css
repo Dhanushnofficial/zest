@@ -1,16 +1,4 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 *{
   margin: 0;
   padding: 0;
@@ -35,6 +23,34 @@ body{
   background-color:var(--primary);
   color:var(--text-dark);
   font-family: "Source Sans Pro", Sans-serif;
+}
+.App{
+  position: relative;
+  
+}
+.icons{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top:300px;
+  right: 0px;
+  position: fixed;
+  border-radius:"18px 0px 30px 8px";
+  cursor: pointer;
+  background-color:#9d8cff4a ;
+
+}
+.icons:hover{
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  font-size: 35px;
+}
+.icons a{
+  color: var(--text-light);
+}
+.icons a:hover{
+  color: var(--text-dark);
 }
 .container{
   margin: 0 50px;
@@ -79,8 +95,18 @@ body{
   background: rgba(255, 255, 255, 0.2);
   transform: skewX(-20deg);
   transition: left 0.5s ease-in-out;
+
 }
 
 .btn:hover::before {
   left: 120%;
+}
+@media (max-width: 430px){
+  body{
+    overflow-x: hidden;
+  }
+  .icons{
+    right: 0px;
+    margin: 20px 0px;
+  }
 }
